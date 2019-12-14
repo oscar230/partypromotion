@@ -52,6 +52,12 @@ article {
 	}
 }
 
-#nav {
-	text-align: center;
+@media only screen and (max-width: 800px) {
+	#title{ font-size: 15vw; }
+	p, a, b, i{ font-size: 4vw; }
+}
+
+@media only screen and (min-width: 800px) {
+	#title{ font-size: 125px; }
+	p, a, b, i{ font-size: 25px; }
 }

@@ -1,10 +1,12 @@
-<div class="info" *ngFor="let item of list">
-    <span *ngIf="timeLeft(item) > 0">
-        <h3>{{item.header}}</h3>
-        <p>{{item.body}}</p>
-        <p class="text-secondary">{{item.time | date:'d MMM y'}}</p>
-    </span>
-    <span *ngIf="timeLeft(item) < 0">
-        <p class="text-warning tl"><i class="text-warning far fa-clock"></i> Ny info släpps {{item.time | date:'d MMM y'}} om {{ timeLeft(item) * -1 / 10 }} sekunder.</p>
-    </span>
+<div *ngFor="let item of list">
+    <div *ngIf="timeLeft(item) > 0" class="infobox">
+        <p class="info-text">
+            {{ item.text }} <span class="badge badge-pill badge-light">
+                Släpptes {{item.time | date:'d MMM'}}
+            </span>
+        </p>
+    </div>
+    <div *ngIf="timeLeft(item) < 0">
+        <p class="text-warning tl"><i class="text-warning far fa-clock"></i> Ny info släpps den {{item.time | date:'d-MM-y HH:mm'}}.</p>
+    </div>
 </div>
