@@ -1,6 +1,6 @@
 #background {
     background-color: black;
-    background: url(map.png) no-repeat center center fixed; 
+    background: url(map.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -30,24 +30,10 @@
 
 #content {
     position: relative;
-    top: 5%;
     margin: auto;
     padding: 5px 15px;
-    height: 75%;
     z-index: 1;
     display: block;
     overflow-y: scroll;
     overflow-x: hidden;
-}
-
-@media only screen and (max-width: 800px) {
-    #content {
-        width: 90%;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    #content {
-        width: 800px;
-    }
 }
