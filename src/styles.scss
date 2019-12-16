@@ -3,6 +3,7 @@
 
 #title {
     margin: 10px;
+    user-select: none;
 }
 
 h1, h2, h3 {
@@ -35,7 +36,7 @@ article {
 #wrapper #title{
 	position: relative;
 	animation: glitch-skew 15s infinite linear alternate-reverse;
-	
+
 	&::before{
 		@include glitchCopy;
 		left: 2px;
@@ -43,7 +44,7 @@ article {
 		clip: rect(44px, 450px, 56px, 0);
 		animation: glitch-anim 7s infinite linear alternate-reverse;
 	}
-	
+
 	&::after {
 		@include glitchCopy;
 		left: -2px;
