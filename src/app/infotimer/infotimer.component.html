@@ -2,11 +2,11 @@
     <div *ngIf="timeLeft(item) > 0" class="infobox">
         <p class="info-text">
             {{ item.text }} <span class="badge badge-pill badge-light">
-                Släpptes {{item.time | date:'d MMM'}}
+                Släpptes {{ item.time | date:'d MMM' }}
             </span>
         </p>
     </div>
     <div *ngIf="timeLeft(item) < 0">
-        <p class="text-warning tl"><i class="text-warning far fa-clock"></i> Ny info släpps den {{item.time | date:'d-MM-y HH:mm'}}.</p>
+      <p class="text-warning tl"><i class="text-warning far fa-clock"></i> Ny info släpps kl {{ item.time | date:'HH:mm' }} den {{ item.time | date:'MMM d y' }}.</p>
     </div>
 </div>
