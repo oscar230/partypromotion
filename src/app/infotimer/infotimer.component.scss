@@ -1,12 +1,14 @@
-.infobox{
-    padding-top: 10px;
+.info{
+    padding: 20px 0;
     border-top: whitesmoke solid 3px;
-    border-radius: 1px;
+
+    &-text {
+      margin-bottom: 0;
+    }
+
+    &-time {
+      padding: 0;
+    }
 }
 
-.info-text {
-    margin-bottom: 0;
-}
-.info-time {
-    padding: 0;
-}
+
