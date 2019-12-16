@@ -11,16 +11,19 @@ class InfoObject {
   styleUrls: ['./infotimer.component.scss']
 })
 
+
 export class InfotimerComponent implements OnInit {
   list = [
     {
-      text: 'text eller hur.',
-      time: Date.now() + 1000
-    }, {
+      text: 'Nu smäller det, Campusfesten är här',
+      time: new Date( 'May 28, 2020, 15:00' ).getTime()
+    },
+    {
+      // tslint:disable-next-line:max-line-length
       text: 'Borrowed from German Fest. Related to Middle English feste, from Old French feste, from Latin festum however, the modern word is a borrowing of the German, which shares the same ultimate origin. More at feast.',
       time: 121333344
     }
-  ]
+  ];
 
   constructor() {
     console.log('current time ' + Date.now());
