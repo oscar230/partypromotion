@@ -16,18 +16,29 @@ export class InfotimerComponent implements OnInit {
   list = [
     {
       text: 'Nu smäller det, Campusfesten är här',
-      time: new Date( '01 28, 2020, 15:00' )
+      time: new Date( '05 30, 2020, 15:00' )
     },
-    {
-      text: 'Borrowed from German Fest. Related to Middle English feste, from Old French feste, from Latin festum however, the modern word is a borrowing of the German, which shares the same ultimate origin. More at feast.',
-      time: new Date( 'May 28, 2019, 00:00' )
-    }
   ];
+  ready = [];
+  closest = 0;
+  object = {};
 
   constructor() {
     this.list.forEach(e => {
-      console.log(e.time + ":" + this.timeLeft(e) + " -> " + e.text);
+      const temp = this.timeLeft( e );
+      if (this.timeLeft(e) > 0) {
+        this.ready.push( e );
+      } else {
+        if (this.closest === 0) {
+          this.closest = temp;
+          this.object = e;
+        } else if (temp > this.closest) {
+          this.closest = temp;
+          this.object = e;
+        }
+      }
     });
+    this.ready.unshift( this.object );
   }
 
   ngOnInit() {
