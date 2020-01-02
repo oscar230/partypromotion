@@ -1,14 +1,14 @@
-<div *ngFor="let item of list">
+<div *ngFor="let item of ready">
     <div *ngIf="timeLeft(item) > 0" class="info">
         <p class="info-text">
             {{ item.text }} <span class="badge badge-pill badge-light">
-                Släpptes {{ item.time | date:'d MMM' }}
+                Släpptes {{ item.time | date:'d/MM' }}
             </span>
         </p>
     </div>
     <div *ngIf="timeLeft(item) < 0">
       <p class="text-warning tl"><i class="text-warning far fa-clock"></i>
-        Ny info släpps kl {{ item.time | date:'HH:mm' }} den
-        {{ item.time | date:'d/MM/y' }}.</p>
+        Ny info släpps {{ item.time | date:'HH:mm' }} den
+        {{ item.time | date:'d/MM' }}.</p>
     </div>
 </div>
