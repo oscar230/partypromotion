@@ -1,14 +1,17 @@
-<div *ngFor="let item of ready">
-    <div *ngIf="timeLeft(item) > 0" class="info">
+<div *ngIf="eventsUnreleased">
+    <p class="text-warning tl"><i class="text-warning far fa-clock"></i>
+        Ny info släpps {{ eventsUnreleased.time | date:'HH:mm' }} den
+        {{ eventsUnreleased.time | date:'d/MM' }}.
+    </p>
+</div>
+
+<div *ngFor="let item of eventsReleased">
+    <div class="info">
         <p class="info-text">
-            {{ item.text }} <span class="badge badge-pill badge-light">
+            {{ item.text }}
+            <span class="badge badge-pill badge-light">
                 Släpptes {{ item.time | date:'d/MM' }}
             </span>
         </p>
-    </div>
-    <div *ngIf="timeLeft(item) < 0">
-      <p class="text-warning tl"><i class="text-warning far fa-clock"></i>
-        Ny info släpps {{ item.time | date:'HH:mm' }} den
-        {{ item.time | date:'d/MM' }}.</p>
     </div>
 </div>
