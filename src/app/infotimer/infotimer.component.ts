@@ -25,10 +25,6 @@ export class InfotimerComponent {
       text: 'Valborg',
       textEn: 'Valborg',
       time: new Date( '04 30, 2020, 15:00' )
-    },{
-      text: 'Nu',
-      textEn: 'Now',
-      time: new Date( '01 05, 2020, 15:00' )
     }
   ];
 
