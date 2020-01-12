@@ -61,3 +61,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// import 'intl'; // https://github.com/andyearnshaw/Intl.js
+// import 'core-js/stable'; // https://github.com/zloirock/core-js
