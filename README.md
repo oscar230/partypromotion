@@ -1,2 +1,2 @@
-# Campusfesten 2020 Karlstad
-* En webbplats för hype!
+# Campusfesten 2022
+Generate QR-code for promotion [here](https://www.the-qrcode-generator.com/).
