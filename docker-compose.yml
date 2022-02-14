@@ -1,0 +1,9 @@
+version: "3"
+services:
+  oscarwonkyse:
+    image: oscaande/partypromotion:latest
+    ports:
+      - 4008:8080
+    restart: always
+    labels:
+        - "com.centurylinklabs.watchtower.enable=true"

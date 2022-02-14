@@ -14,10 +14,9 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      repo: registry.wonky.se/oscarwonkyse
+      repo: oscaande/partypromotion
       tags: latest
-      registry: registry.wonky.se
-
+      
 trigger:
   branch:
   - master
