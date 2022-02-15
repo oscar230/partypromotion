@@ -12,18 +12,42 @@
   <div class="splash">
     <h1>Campusfesten</h1>
     <h2>Maj 2022</h2>
+    <p id="countdowntimer"></p>
     <p>
-      <a href="https://www.regeringen.se/pressmeddelanden/2022/02/merparten-av-restriktionerna-mot-covid-19-tas-bort-den-9-februari-2022/">Merparten av <b>restriktionerna har släppt</b></a>, nu ska folk dansa fritt på campus. Traditionen består, bjud in nära och kära.
+      <a href="https://www.regeringen.se/pressmeddelanden/2022/02/merparten-av-restriktionerna-mot-covid-19-tas-bort-den-9-februari-2022/">Större delen av <b>restriktionerna har släppt</b></a>, nu ska vi dansa på campus! Bjud in nära och kära. 🎉
     </p>
-    <p>
-      Tänk på att hålla rent, att inte förstöra KBABs byggnader och egendom. Behandla besökande tjänstemän som människor och visa respekt. Står du på en väktares område gör som de säger, eller lämna och fortsätt med det du gjorde utanför väktarens område.
-    </p>
+    <p>Tänk på att:</p>
+    <ul>
+      <li>🚯 Hålla rent, kasta skräp i soptunnor.</li>
+      <li>🏠 Inte förstöra KBABs byggnader.</li>
+      <li>👮 Respektera polis och väktare.</li>
+      <li>🍺 Hantera ditt intag.</li>
+      <li>👖 Bär ovve enligt din förenings regler.</li>
+      <li>💊 Avstå erbjudanden från langare.</li>
+    </ul>
     <p>
       <i>
-        Den här sajten uppmanar inte på något sätt till ett destruktivt, vårdslöst, ansvarsbefriat, och alkoholpåverkat beteende utan hyllar endast en 10 årig tradition.
+        Den här sajten uppmanar inte på något sätt till ett destruktivt, vårdslöst, ansvarsbefriat, och alkoholpåverkat beteende utan hyllar endast en 10 år lång tradition.
       </i>
     </p>
   </div>
-  <a class="accessibility-link" href="en.html">Click here to read in <b>english</b> with added information and with accessibility features (e.g. color blindness or dyslexia).</a>
+  <a class="accessibility-link" href="en.html">Click here to read in <b>english</b> with more detailed information and accessibility features <i>for e.g. color blindness or dyslexia</i>.</a>
+  <script>
+    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var timespan = countDownDate - now;
+      var days = Math.floor(timespan / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timespan % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timespan % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timespan % (1000 * 60)) / 1000);
+      document.getElementById("countdowntimer").innerHTML = days + " d" + hours + "t "
+      + minutes + "m " + seconds + "s ";
+      if (timespan < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Nu är det fest! 😎";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
