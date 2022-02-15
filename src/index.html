@@ -12,7 +12,7 @@
   <div class="splash">
     <h1>Campusfesten</h1>
     <h2>Maj 2022</h2>
-    <p id="countdowntimer"></p>
+    <p id="countdowntimer">Tid kvar...</p>
     <p>
       <a href="https://www.regeringen.se/pressmeddelanden/2022/02/merparten-av-restriktionerna-mot-covid-19-tas-bort-den-9-februari-2022/">Större delen av <b>restriktionerna har släppt</b></a>, nu ska vi dansa på campus! Bjud in nära och kära. 🎉
     </p>
@@ -27,13 +27,13 @@
     </ul>
     <p>
       <i>
-        Den här sajten uppmanar inte på något sätt till ett destruktivt, vårdslöst, ansvarsbefriat, och alkoholpåverkat beteende utan hyllar endast en 10 år lång tradition.
+        Den här sajten uppmanar inte på något sätt till ett destruktivt, vårdslöst, ansvarsbefriat, och alkoholpåverkat beteende. Den hyllar endast en lång tradition.
       </i>
     </p>
   </div>
   <a class="accessibility-link" href="en.html">Click here to read in <b>english</b> with more detailed information and accessibility features <i>for e.g. color blindness or dyslexia</i>.</a>
   <script>
-    var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+    var countDownDate = new Date("May 28, 2022 12:00:00").getTime();
     var x = setInterval(function() {
       var now = new Date().getTime();
       var timespan = countDownDate - now;
@@ -41,7 +41,7 @@
       var hours = Math.floor((timespan % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((timespan % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((timespan % (1000 * 60)) / 1000);
-      document.getElementById("countdowntimer").innerHTML = days + " d" + hours + "t "
+      document.getElementById("countdowntimer").innerHTML = days + "d " + hours + "t "
       + minutes + "m " + seconds + "s ";
       if (timespan < 0) {
         clearInterval(x);
