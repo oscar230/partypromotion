@@ -29,13 +29,9 @@
 }
 
 .accessibility-link {
-    margin: 5px;
-    padding: 5px;
+    padding: 10px;
     background-color: black;
     color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
 }
 
 ul {
