@@ -18,16 +18,18 @@
     padding: 5vh 5vw;
     margin: 0;
     overflow: auto;
-    height: 90vh;
+    width: 80vw;
+    height: 60vh;
+    position: relative;
+    left: 5vw;
+    top: 15vh;
 }
 
 @media only screen and (max-width: 600px) {
     .splash {
-        width: 80vw;
-        height: 60vh;
-        position: relative;
-        left: 5vw;
-        top: 15vh;
+        height: 90vh;
+        top: 0;
+        left: 0;
     }
 }
 
