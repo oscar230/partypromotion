@@ -15,15 +15,20 @@
 }
 
 .splash {
-    /* background-color: rgba(0, 0, 0, 0.3); */
     padding: 5vh 5vw;
-    width: 80vw;
-    height: 60vh;
     margin: 0;
-    position: relative;
-    top: 15vh;
-    left: 5vw;
     overflow: auto;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .splash {
+        width: 80vw;
+        height: 60vh;
+        position: relative;
+        left: 5vw;
+        top: 15vh;
+    }
 }
 
 .splash div h1 {
