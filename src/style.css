@@ -14,28 +14,8 @@
     overflow: hidden;
 }
 
-.splash {
-    padding: 5vh 5vw;
-    margin: 0;
-    overflow: auto;
-    width: 80vw;
-    height: 60vh;
-    position: relative;
-    left: 5vw;
-    top: 15vh;
-}
-
-@media only screen and (max-width: 600px) {
-    .splash {
-        height: 90vh;
-        top: 0;
-        left: 0;
-    }
-}
-
-.splash div h1 {
-    font-weight: bold;
-    font-size: 10vw;
+article {
+    margin: 3em;
 }
 
 ul {
