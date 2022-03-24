@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="style.css">
   <title>Campusfesten</title>
 </head>
-<body class="bg-map">
-  <article>
+<body>
+  <header>
     <h1>Campusfesten</h1>
     <h2>Maj 2022</h2>
     <p id="countdowntimer">Tid kvar...</p>
-    <p>
-      Nu ska vi dansa på campus! Dela sidan, sprid ordet, djud in nära och kära.
-    </p>
+  </header>
+  <article>
+    <h2>Nu ska vi dansa på campus! Dela sidan, sprid ordet, djud in nära och kära.</h2>
     <p>Tänk på att:</p>
     <ul>
       <li>🚯 Hålla rent, kasta skräp i soptunnor.</li>
@@ -35,9 +35,12 @@
       <li>🚩 Är du utomstående och inte tillhör en förening men ändå har åsikter, vänligen <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">klicka här för kontakt</a>!</li>
     </ul>
     <p>Den här sajten uppmanar inte på något sätt till ett destruktivt, vårdslöst, ansvarsbefriat, och alkoholpåverkat beteende. Den hyllar endast en 10 år lång tradition.</p>
-    <p><b><a href="en.html">Click here to read in english with accessibility features turned on, e.g. for color blindness or dyslexia.</a></b></p>
-  </article>  
+  </article>
+  <footer>
+    <p><a href="en.html">Click here</a> to read in english with accessibility features turned on.</b></p>
+  </footer>
   <script>
+    // a29tIHDDpSBjYW1wdXNmZXN0ZW4gZMOlw6XDpcOlw6XDpSEgU2x1dGEgbGV0YSBibGFuZCBtaW4ga29kISA6RA==
     var countDownDate = new Date("May 28, 2022 12:00:00").getTime();
     var x = setInterval(function() {
       var now = new Date().getTime();
@@ -45,14 +48,16 @@
       var days = Math.floor(timespan / (1000 * 60 * 60 * 24));
       var hours = Math.floor((timespan % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((timespan % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((timespan % (1000 * 60)) / 1000);
-      document.getElementById("countdowntimer").innerHTML = days + "d " + hours + "t "
-      + minutes + "m " + seconds + "s ";
       if (timespan < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "Nu är det fest! 😎";
+      } else if (timespan / (1000 * 60 * 60 * 24) < 7) {
+        var seconds = Math.floor((timespan % (1000 * 60)) / 1000);
+        document.getElementById("countdowntimer").innerHTML = days + "d " + hours + "t " + minutes + "m " + seconds + "s";
+      } else {
+        document.getElementById("countdowntimer").innerHTML = days + "d " + hours + "t " + minutes + "m";
       }
-    }, 1000);
+    }, 250);
   </script>
 </body>
 </html>
